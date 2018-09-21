@@ -1,12 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
- *
- * @author Administrator
- */
+
 package week1;
 
 public class Student {
@@ -70,10 +62,10 @@ public class Student {
      */
     Student(String n, String sid, String em) {
         // TODO:
-        this.name = name;
-        this.id = id;
+        this.name = n;
+        this.id = sid;
         this.group = "INT22045";
-        this.email = email;
+        this.email = em;
     }
 
    
@@ -93,8 +85,13 @@ public class Student {
 
     String getInfo() {
         // TODO:
-        return name+" "id+" "+group+" "email;
-         
+        return  this.name+" "+this.id+" "+this.group+" "+this.email;
+    }
+    public static void main( String arg[]) {
+        Student Student = new Student("manh","00","nguyenducmanh2581912");
+        System.out.println(Student .getInfo());
     }
 }
+
+
 
