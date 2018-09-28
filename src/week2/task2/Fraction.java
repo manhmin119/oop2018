@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package week22;
+package week2.task2;
 
 /**
  *
@@ -46,8 +46,9 @@ public class Fraction {
         // TODO: Phương thức cộng hai phân số (this và other), trả về đối tượng Fraction mới
         int ts=this.getNumerator()*other.getDenominator()+this.getDenominator()*other.getNumerator();
         int ms=this.getDenominator()*other.getDenominator();
-        ts=ts/gcd(ts,ms);
-        ms=ms/gcd(ts,ms);
+        int ucln=gcd(ts,ms);
+        ts=ts/ucln;
+        ms=ms/ucln;
         Fraction add=new Fraction(ts,ms);
         return  add;
     }
@@ -55,9 +56,10 @@ public class Fraction {
     public Fraction subtract(Fraction other) {
         int ts=this.numerator*other.denominator-this.denominator*other.numerator;
         int ms=this.denominator*other.denominator;
+        int ucln=gcd(ts,ms);
         // TODO: Phương thức trừ hai phân số (this và other), trả về đối tượng Fraction mới
-        ts=ts/gcd(ts,ms);
-        ms=ms/gcd(ts,ms);
+        ts=ts/ucln;
+        ms=ms/ucln;
         Fraction subtract=new Fraction(ts,ms);
         return subtract;
     }
@@ -66,8 +68,9 @@ public class Fraction {
         // TODO: Phương thức nhân hai phân số (this và other), trả về đối tượng Fraction mới
         int ts=this.numerator*other.numerator;
         int ms=this.denominator*other.denominator;
-        ts=ts/gcd(ts,ms);
-        ms=ms/gcd(ts,ms);
+        int ucln=gcd(ts,ms);
+        ts=ts/ucln;
+        ms=ms/ucln;
         Fraction multiply=new Fraction(ts,ms);
         return multiply;
     }
@@ -76,8 +79,9 @@ public class Fraction {
         // TODO: Phương thức chia hai phân số (this và other), trả về đối tượng Fraction mới
         int ts=this.numerator*other.denominator;
         int ms=this.denominator*other.numerator;
-        ts=ts/gcd(ts,ms);
-        ms=ms/gcd(ts,ms);
+        int ucln=gcd(ts,ms);
+        ts=ts/ucln;
+        ms=ms/ucln;
         Fraction divide=new Fraction(ts,ms);
         return divide;
     }
@@ -100,11 +104,10 @@ public class Fraction {
 			return false;
 		}
 		return false;
-    }
 	}
-    /*public static void main(String[]arg){
-        Fraction a=new Fraction(3,4);
-        Fraction b=new Fraction(4,5);
+    public static void main(String[]arg){
+        Fraction a=new Fraction(3,10);
+        Fraction b=new Fraction(1,10);
         Fraction c=a.add(b);
         Fraction d=a.subtract(b);
         Fraction e=a.divide(b);
@@ -118,4 +121,7 @@ public class Fraction {
         }
         System.out.println(c.numerator+"/"+c.denominator);
         System.out.println(d.numerator+"/"+d.denominator);
-    }*/
+        System.out.println(e.numerator+"/"+e.denominator);
+        System.out.println(f.numerator+"/"+f.denominator);
+    }
+}
