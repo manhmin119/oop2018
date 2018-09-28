@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package week2;
+package week22;
 
 /**
  *
@@ -81,8 +81,41 @@ public class Fraction {
         Fraction divide=new Fraction(ts,ms);
         return divide;
     }
-    public  boolean equals(Object obj){
-        
-        double kq1=(double)this.numerator/(double)this.denominator
+    public boolean equals(Object obj) {
+		if(obj instanceof Fraction) {
+			Fraction other = (Fraction) obj;
+			if(this.denominator == 0 || other.denominator == 0) {
+                            System.exit(0);
+			}
+			else {
+				if(this.numerator * other.denominator - this.denominator * other.numerator == 0) {
+					return true;
+				}
+				else {
+					return false;
+				}
+			}
+		}
+		else {
+			return false;
+		}
+		return false;
     }
-}
+	}
+    /*public static void main(String[]arg){
+        Fraction a=new Fraction(3,4);
+        Fraction b=new Fraction(4,5);
+        Fraction c=a.add(b);
+        Fraction d=a.subtract(b);
+        Fraction e=a.divide(b);
+        Fraction f=a.multiply(b);
+        boolean g=a.equals(b);
+        if(g==true){
+            System.out.println(" giông nhau");
+        }
+        else{
+            System.out.println("KHAC NHAU");
+        }
+        System.out.println(c.numerator+"/"+c.denominator);
+        System.out.println(d.numerator+"/"+d.denominator);
+    }*/
