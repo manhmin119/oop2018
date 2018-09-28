@@ -10,9 +10,7 @@ package week2.task3;
  * @author CCNE
  */
 public class Task3 {
-    public static void main(String[] args) {
-        
-    }
+    
 }
  class conmeo {
     private String ten;
