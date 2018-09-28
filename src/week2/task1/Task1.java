@@ -23,9 +23,3 @@ public class Task1 {
 
    
 
-public static void main(String[] arg){
-
-    System.out.println(gcd(4,6));
-    System.out.println(fibonacci(4));
-}
-}
