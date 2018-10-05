@@ -11,7 +11,7 @@ public class Week3 {
     public static int minOfArray(int[] array) {
         // TODO: Tìm giá trị nhỏ nhất của của một mảng số nguyên (kích thước mảng <= 100 phần tử)
         int min=array[0];
-        for(int i=0;i<=100;i++){
+        for(int i=1;i<array.length;i++){
             if(array[i]<min)
                 min=array[i];
         }
@@ -27,7 +27,7 @@ public class Week3 {
     public static String calculateBMI(double weight, double height) {
         // TODO: Viết chương trình tính chỉ số BMI và in ra kết quả đánh giá
         double BMI;
-        BMI=height/weight*weight;
+        BMI=weight/(height*height);
         if(BMI<18.5){
             return "thiếu cân";
     }
@@ -40,5 +40,6 @@ public class Week3 {
         else {
             return "béo phì";
     }
-        
+    }
+}
     
