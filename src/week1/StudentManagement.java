@@ -1,64 +1,91 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package week1;
 
 public class StudentManagement {
-
+    private Student[] students = new Student[100];
+    private int size_of_students = 0;
+    private int classSize = 0;
+    private String[] classList = new String[100];
+    
+    
     // TODO: khai báo thuộc tính students là array chứa các đối tượng thuộc lớp Student (max. 100)
-    static Student student[];
+
     public boolean sameGroup(Student s1, Student s2) {
         // TODO:
-        if(s1.getGroup().equals(s2.getGroup())){
-            return true;
+        
+        return s1.getGroup().equals(s2.getGroup()) ;
+    }
+    public void addStudent(Student a){
+        if(size_of_students <= 100){
+            students[size_of_students] = a;
+            size_of_students ++;
         }
         else{
-            return false;
-                    }
-        //return false; // xóa dòng này sau khi cài đặt
+            System.out.println("FULL");
+        }
+        
     }
+    
+    
 
-    public static void main(String args[]){
-        Student s1= new Student();
-        s1.setName("manh");
-        s1.setId("001");
-        s1.setEmail("nguyenducmanh@gmailo.com");
-        s1.setGroup("int2204");
+    void studentsByGroup() {
+        for(int i= 0; i< size_of_students; i++){
+            boolean check = true;
+            for(int j=0; j < classSize; j++){
+                if(students[i].getGroup().equals(classList[j])){
+                    check = false;
+                }
+            }
+            if(check){
+                classList[classSize] = students[i].getGroup();
+                classSize++ ;
+            }
+        }
+        for(int i=0; i<classSize; i++){
+            System.out.println("LỚP: " + classList[i]);
+            for(int j=0; j < size_of_students ; j++){
+                if(students[j].getGroup().equals(classList[i])){
+                    System.out.println(students[j].getInfo());
+                    System.out.println("----------");
+                }
+            }
+            System.out.println("*********************************");
+        }
         
-        Student s2= new Student();
-        s2.setName("aoil");
-        s2.setId("002");
-        s2.setEmail("aoil@gmail.com");
-        s2.setGroup("int2204");
         
-        Student s3=new Student();
-        s3.setName("ass");
-        s3.setId("003");
-        s3.setEmail("ass@gmail.com");
-        s3.setGroup("int2205");
-        
-       Student s4=new Student(s3);
-        StudentManagement test= new StudentManagement();
-        boolean a=test.sameGroup(s1,s3);
-        if(a==true)
-            System.out.println("cung lop roi");
-        else
-            System.out.println("khong cung lop");
-    }
-}
-   /* void studentsByGroup() {
-        // TODO:
     }
 
     void removeStudent(String id) {
-        // TODO:
+        for(int i=0; i < size_of_students; i++){
+            if(students[i].getId().equals(id)){
+                for(int j = i; j < size_of_students ; j++){
+                    students[j] = students[j+1];
+                }
+                size_of_students--;
+                break;
+            }
+        }
     }
+    
 
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         // TODO:
+        Student a = new Student("NGuyen Dinh Thinh", "17021045", "thinhnguyenxc@gmail.com");
+        Student b = new Student("Nguyen Van A", "17021046", "A@gmail.com");
+        Student c = new Student("Nguyen Van B", "17021046", "B@gmail.com");
+        c.setGroup("INT22042");
+        StudentManagement test = new StudentManagement();
+        if(test.sameGroup(a, b)) System.out.println("a va b cung lop");
+        else System.out.println("a va b khac lop");
+        StudentManagement temp = new StudentManagement();
+        temp.addStudent(a);
+        temp.addStudent(b);
+        temp.addStudent(c);
+        temp.studentsByGroup();
+        
     }
+    
 }
-*/
