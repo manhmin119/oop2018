@@ -1,0 +1,55 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package week4.task1;
+
+/**
+ *
+ * @author CCNE
+ */
+public class Rectangle extends Shape {
+    protected double width;
+    protected double length;
+    public Rectangle(){
+        super();
+        this.width=1.0;
+        this.length=1.0;
+        
+    }
+    public Rectangle(double width,double length){
+        this.width=width;
+        this.length=length;
+    }
+    public Rectangle(double width,double length, String color, boolean filled){
+        super(color,filled);
+        this.width=width;
+        this.length=length;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public boolean isFilled() {
+        return filled;
+    }
+
+    public void setFilled(boolean filled) {
+        this.filled = filled;
+    }
+    public double getArea(){
+        return width*length;
+    }
+    public double getPerimete(){
+        return (width+width+length+length);
+    }
+    public String toString(){
+        return "{"+width+length+"}";
+    }
+}
