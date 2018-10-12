@@ -1,0 +1,35 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package week4.task1;
+
+/**
+ *
+ * @author CCNE
+ */
+public class camcaophong extends quacam{
+    private String mui;
+    private String vidactrung;
+
+    public String getMui() {
+        return mui;
+    }
+
+    public void setMui(String mui) {
+        this.mui = mui;
+    }
+
+    public String getVidactrung() {
+        return vidactrung;
+    }
+
+    public void setVidactrung(String vidactrung) {
+        this.vidactrung = vidactrung;
+    }
+    public camcaophong(){
+        this.mui="chua mạnh";
+        this.vidactrung="rất chua";
+    }
+}
