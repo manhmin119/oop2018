@@ -7,11 +7,11 @@ package week7;
 
 /**
  *
- * @author CCNE
+ * @author Administrator
  */
-public abstract class BinaryExpression extends Expression {
-       public abstract Expression left();
-       public abstract Expression right();
-       public abstract String toString();
-       public abstract int evaluate();
+ abstract class BinaryExpression extends Expression {
+  public abstract int evaluate();
+	public abstract String toString();
+	public abstract Expression left();
+	public abstract Expression right();
 }
