@@ -18,6 +18,6 @@ public class Square extends Expression {
         return "";
     }
     public int evaluate(){
-        return this.expression.evaluate();
+        return expression.evaluate()*expression.evaluate();
     }
 }
