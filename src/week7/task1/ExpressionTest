@@ -1,0 +1,87 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package week7;
+
+/**
+ *
+ * @author Administrator
+ */
+public class ExpressionTest {
+   public static void main(String[] args){
+       Expression x1= new Square(new Numeral(10));
+       Expression x2 = new Numeral(1);
+       Expression x3= new Subtraction(x1, x2);
+       Expression x4 = new Multiplication(new Numeral(2), new Numeral(3));
+       Expression x5 = new Addition(x3, x4);
+       Expression x6 = new Square(x5);
+       Expression x7= new Division(new Numeral(1), new Numeral(0));
+       System.out.println(x6.evaluate());
+       System.out.println(x7.evaluate());
+   }
+}
+
+class Subtraction extends BinaryExpression{
+   private Expression left;
+   private Expression right;
+   public Subtraction(Expression left, Expression right){
+       this.left = left;
+       this.right = right;
+   }
+   public Expression left() {
+       return this.left;
+   }
+   public Expression right() {
+       return this.right;
+   }
+   public int evaluate() {
+       return left.evaluate() - right.evaluate();
+   }
+   public String toString() {
+       return "("+left.toString()+"-"+(right.toString())+")";
+   }
+}
+class Multiplication extends BinaryExpression{
+   private Expression left;
+   private Expression right;
+   public Multiplication(Expression left, Expression right){
+       this.left = left;
+       this.right = right;
+   }
+   public Expression left() {
+       return this.left;
+   }
+   public Expression right() {
+       return this.right;
+   }
+   public int evaluate() {
+       return left.evaluate()*right.evaluate();
+   }
+   public String toString() {
+       return "("+left.toString()+"*"+right.toString()+")";
+   }
+}
+class Division extends Expression{
+   private Expression left;
+   private Expression right;
+   public Division(Expression left, Expression right){
+       this.left = left;
+       this.right= right;
+   }
+   
+   public int evaluate(){
+       try{
+           return left.evaluate()/right.evaluate();
+       }
+       catch(ArithmeticException e){
+           System.out.println("lỗi chia cho 0");
+       }
+    return 0;
+   }
+}
+
+    
+   
+
