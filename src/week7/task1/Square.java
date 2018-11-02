@@ -7,17 +7,17 @@ package week7;
 
 /**
  *
- * @author CCNE
+ * @author Administrator
  */
-public class Square extends Expression {
-    public Expression expression;
-    public Square(Expression expression){
-       this.expression= expression;
-    }
-     public String toString(){
-        return "";
-    }
-    public int evaluate(){
-        return expression.evaluate()*expression.evaluate();
-    }
+public class Square extends Expression{
+  private Expression expression;
+	public Square(Expression expression) {
+		this.expression=expression;
+	}
+	public int evaluate() {
+		return expression.evaluate()*expression.evaluate();
+	}
+	public String toString() {
+		return "("+expression.toString()+")";
+	}
 }
