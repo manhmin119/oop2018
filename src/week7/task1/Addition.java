@@ -1,25 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package week7;
 
-/**
- *
- * @author CCNE
- */
-public abstract class Addition extends BinaryExpression {
-    private Expression left;
+
+public class Addition extends BinaryExpression{
+  private Expression left;
     private Expression right;
-    public  Addition(Expression left,Expression right){
-        this.left=left;
-        this.right=right;
+	public Expression left() {
+		return this.left;
+	}
+	public Expression right() {
+		return this.right;
+	}
+	public Addition(Expression left, Expression right) {
+		this.left=left;
+		this.right=right;
+	}
+	public int evaluate(){
+        return left.evaluate()+right.evaluate();
     }
-    public String toString(){
-        return "";
-    }
-    public int value(){
-        return 0;
-    }    
+	public String toString() {
+        return "("+left.toString()+"+"+right.toString()+")";
+	}
 }
