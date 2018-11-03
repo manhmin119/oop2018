@@ -25,7 +25,7 @@ package week4.task1;
  * 
  * @author Administrator
  */
-public class hoaqua{ 
+/*public class hoaqua{ 
     //  TODO:khai bao thuoc tinh cho class
     private String mausac;
     private String huongvi;
@@ -105,4 +105,4 @@ class camcaophong extends quacam{
 }
 class camsanh extends quacam{
     
-}
+}*/
