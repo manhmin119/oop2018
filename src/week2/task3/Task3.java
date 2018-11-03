@@ -9,7 +9,7 @@ package week2.task3;
  *
  * @author CCNE
  */
-public class Task3 {
+/*public class Task3 {
     
 }
  class conmeo {
@@ -126,6 +126,6 @@ class conchuot{
     public void longg(){
         System.out.println("vừa lông");
     }
-}
+}*/
 
 
