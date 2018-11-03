@@ -1,7 +1,7 @@
 
 package week1;
 
-public class Student {
+/*public class Student {
 
     private String name;
     private String id;
@@ -93,5 +93,5 @@ public class Student {
     }
 }
 
-
+*/
 
