@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package week2.task2;
+/*package week2.task2;
 
 /**
  *
@@ -125,3 +125,4 @@ public class Fraction {
         System.out.println(f.numerator+"/"+f.denominator);
     }
 }
+*/
