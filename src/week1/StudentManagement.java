@@ -1,6 +1,6 @@
 package week1;
 
-public class StudentManagement {
+/*public class StudentManagement {
     private Student[] students = new Student[100];
     private int size_of_students = 0;
     private int classSize = 0;
@@ -89,3 +89,4 @@ public class StudentManagement {
     }
     
 }
+*/
