@@ -1,6 +1,6 @@
 package week3;
 
-public class Week3 {
+/*public class Week3 {
 
     public static int max(int m, int n) {
         // TODO: Tìm giá trị lớn nhất của hai số nguyên, giá trị trả về của hàm là số lớn nhất
@@ -42,4 +42,4 @@ public class Week3 {
     }
     }
 }
-    
+    */
