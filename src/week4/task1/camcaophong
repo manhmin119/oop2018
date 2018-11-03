@@ -9,7 +9,7 @@ package week4.task1;
  *
  * @author CCNE
  */
-public class camcaophong extends quacam{
+/*public class camcaophong extends quacam{
     private String mui;
     private String vidactrung;
 
@@ -33,3 +33,4 @@ public class camcaophong extends quacam{
         this.vidactrung="rất chua";
     }
 }
+*/
