@@ -4,7 +4,7 @@ package week2.task1;
  *
  * @author Administrator
  */
-public class Task1 {
+/*public class Task1 {
 
     public static int gcd(int a, int b) {
     if(b==0) return a;
@@ -21,5 +21,5 @@ public class Task1 {
         
     }
 
-   
+   */
 
