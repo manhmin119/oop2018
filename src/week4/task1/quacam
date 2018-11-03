@@ -9,7 +9,7 @@ package week4.task1;
  *
  * @author CCNE
  */
-public class quacam extends hoaqua {
+/*public class quacam extends hoaqua {
     protected String mausac;
     protected String huongvi;
 
@@ -35,3 +35,4 @@ public class quacam extends hoaqua {
     }
 }
 
+*/
